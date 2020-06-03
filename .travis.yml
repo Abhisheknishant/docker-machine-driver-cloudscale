@@ -29,6 +29,10 @@ jobs:
     - <<: *integration
       env:
         - BASE_DOWNLOAD_URL="https://github.com/docker/machine/releases/download/v0.16.2"
+    - <<: *integration
+      arch: arm64
+      env:
+        - BASE_DOWNLOAD_URL="https://github.com/docker/machine/releases/download/v0.16.2"
 
     - stage: Deployment
       before_deploy:
